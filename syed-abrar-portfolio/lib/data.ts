@@ -1,26 +1,45 @@
 // ============================================================
 // PORTFOLIO DATA — Syed Abrar
-// Update any placeholder values marked with [PLACEHOLDER]
+// Populated from resume — update links/placeholders as needed
 // ============================================================
 
 export const PERSONAL = {
   name: 'Syed Abrar',
-  nameShort: ' Abrar',
+  nameShort: 'S. Abrar',
   title: 'AI & Data Science Student',
   subtitle: 'Aspiring Data Analyst',
   tagline: 'AI & Data Science Student | Aspiring Data Analyst',
-  email: 'syedjunaid0084',          // [PLACEHOLDER]
-  linkedin: 'https://linkedin.com/in/syed-abrar', // [PLACEHOLDER]
-  github: 'https://github.com/syed-abrar',  // [PLACEHOLDER]
-  resume: '/resume.pdf',                     // [PLACEHOLDER] — place resume.pdf in /public
-  location: 'Your City, Country',           // [PLACEHOLDER]
+  phone: '+91-9177620461',
+  email: 'syejunaid0084@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/syed-abrar-557528353',
+  github: 'https://github.com/abrar084',
+  resume: '/resume.pdf', // Place your resume PDF in the /public folder
+  location: 'Hyderabad, Telangana, India',
 };
 
 export const ABOUT = {
-  intro: `I'm Syed Abrar, an AI & Data Science student passionate about transforming raw data into meaningful insights. I love building intelligent systems that solve real-world problems — from interactive data dashboards to face-authentication applications.`,
-  background: `Currently pursuing my studies in AI and Data Science, I've developed a strong foundation in Python, machine learning, data analytics, and SQL. My journey started with a curiosity about how machines can learn and has grown into a drive to build production-ready data solutions.`,
-  interests: ['Machine Learning', 'Data Visualization', 'Computer Vision', 'Natural Language Processing', 'Open Source'],
-  goals: `My goal is to land a data analyst or machine learning engineer internship where I can apply my skills at scale — contributing to data-driven decision making and innovative AI products.`,
+  intro: `I'm Syed Abrar, a motivated and detail-oriented Data Analytics and AI enthusiast currently pursuing B.Tech in Artificial Intelligence & Data Science. I'm passionate about transforming raw data into actionable insights that support real business decisions.`,
+  background: `I have practical knowledge of Python, SQL, Machine Learning, Data Visualization, and Business Intelligence. I've built real-world analytics projects — from recommendation systems and market analytics dashboards to AI-powered applications — and I'm always looking to apply these skills at scale.`,
+  interests: [
+    'Machine Learning',
+    'Data Visualization',
+    'Business Intelligence',
+    'Predictive Analytics',
+    'Exploratory Data Analysis',
+    'Dashboard Development',
+  ],
+  goals: `My goal is to secure a data analyst or AI internship where I can apply my skills in Python, SQL, Tableau, and machine learning to solve real business problems and grow into a well-rounded data professional.`,
+  strengths: [
+    'Data Cleaning & Preparation',
+    'Problem Solving',
+    'Critical Thinking',
+    'Dashboard Development',
+    'Business Intelligence',
+    'Statistical Analysis',
+    'Machine Learning Basics',
+    'Fast Learner',
+    'Team Collaboration',
+  ],
 };
 
 export const SKILLS: SkillCategory[] = [
@@ -31,8 +50,8 @@ export const SKILLS: SkillCategory[] = [
     orbitRadius: 3.2,
     size: 0.45,
     speed: 0.8,
-    technologies: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Seaborn'],
-    description: 'Core programming language for data science and ML workflows.',
+    technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Flask'],
+    description: 'Core language for data analysis, ML pipelines, and backend development.',
   },
   {
     id: 'data-analytics',
@@ -41,18 +60,25 @@ export const SKILLS: SkillCategory[] = [
     orbitRadius: 4.8,
     size: 0.4,
     speed: 0.5,
-    technologies: ['Pandas', 'Excel', 'Power BI', 'Google Sheets', 'Statistical Analysis'],
-    description: 'Turning raw datasets into actionable business insights.',
+    technologies: [
+      'Exploratory Data Analysis (EDA)',
+      'Data Cleaning',
+      'Data Wrangling',
+      'Feature Engineering',
+      'Statistical Analysis',
+      'Predictive Analytics',
+    ],
+    description: 'Turning messy datasets into clean, meaningful, decision-ready insights.',
   },
   {
     id: 'sql',
-    name: 'SQL',
+    name: 'SQL & Databases',
     color: '#10b981',
     orbitRadius: 6.2,
     size: 0.35,
     speed: 0.35,
-    technologies: ['MySQL', 'PostgreSQL', 'SQLite', 'Query Optimization', 'Joins & Aggregations'],
-    description: 'Querying and managing relational databases efficiently.',
+    technologies: ['MySQL', 'PostgreSQL', 'Supabase', 'SQL Joins', 'Aggregations', 'Query Optimisation'],
+    description: 'Writing efficient queries and managing relational databases.',
   },
   {
     id: 'machine-learning',
@@ -61,138 +87,132 @@ export const SKILLS: SkillCategory[] = [
     orbitRadius: 7.8,
     size: 0.42,
     speed: 0.25,
-    technologies: ['Scikit-learn', 'Regression', 'Classification', 'Clustering', 'Model Evaluation'],
-    description: 'Building and evaluating predictive models from data.',
+    technologies: [
+      'Scikit-learn',
+      'Logistic Regression',
+      'Linear Regression',
+      'KNN',
+      'K-Means Clustering',
+      'XGBoost',
+    ],
+    description: 'Building and evaluating supervised and unsupervised predictive models.',
   },
   {
     id: 'data-viz',
-    name: 'Data Visualization',
+    name: 'Data Visualisation',
     color: '#ec4899',
     orbitRadius: 9.2,
     size: 0.38,
     speed: 0.18,
-    technologies: ['Matplotlib', 'Seaborn', 'Plotly', 'Power BI', 'Streamlit'],
-    description: 'Creating clear, compelling charts and interactive dashboards.',
+    technologies: ['Tableau', 'Matplotlib', 'Excel', 'Business Dashboards', 'KPI Reporting'],
+    description: 'Creating clear dashboards and charts that communicate data stories.',
   },
   {
     id: 'web-dev',
-    name: 'Web Dev',
+    name: 'Web & Tools',
     color: '#06b6d4',
     orbitRadius: 10.8,
     size: 0.36,
     speed: 0.13,
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Streamlit'],
-    description: 'Building web interfaces to deploy and present data products.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Flask', 'Git', 'GitHub', 'Jupyter Notebook', 'VS Code'],
+    description: 'Building web interfaces and managing code with industry-standard tools.',
   },
 ];
 
 export const PROJECTS: Project[] = [
   {
-    id: 'datamind-ai',
-    title: 'DataMind AI',
-    subtitle: 'Smart CSV Data Analyzer',
+    id: 'student-career-guidance',
+    title: 'Student Career Guidance Analytics System',
+    subtitle: 'Recommendation System & Analytics Dashboard',
     description:
-      'An intelligent CSV data analysis platform with automated data cleaning, interactive visualization, and built-in machine learning capabilities. Upload any dataset and get instant insights.',
-    technologies: ['Python', 'Streamlit', 'Pandas', 'Scikit-learn', 'Plotly', 'NumPy'],
+      'A data-driven recommendation system that guides students toward suitable career paths based on their academic performance and interests. Combines machine learning with interactive Tableau dashboards.',
+    technologies: ['Python', 'SQL', 'Tableau', 'Scikit-learn', 'Pandas', 'Machine Learning'],
     features: [
-      'Automated data cleaning and preprocessing',
-      'Interactive charts and correlation heatmaps',
-      'One-click ML model training and evaluation',
-      'Export cleaned data and reports',
+      'Recommendation engine based on academic performance and student interests',
+      'Exploratory data analysis to identify learning trends',
+      'Interactive Tableau dashboards for visualising student performance',
+      'Machine learning algorithms for personalised recommendation generation',
     ],
-    github: 'https://github.com/syed-abrar/datamind-ai', // [PLACEHOLDER]
-    demo: '#',                                              // [PLACEHOLDER]
-    color: '#6366f1',
+    github: 'https://github.com/abrar084', // Update with direct repo link when available
+    demo: '#',
+    color: '#8b5cf6',
     accent: '#a78bfa',
-    icon: '🧠',
+    icon: '🎓',
   },
   {
-    id: 'facevault',
-    title: 'FaceVault',
-    subtitle: 'Face Authentication & Secure Storage',
+    id: 'retail-scrap-market',
+    title: 'Retail Scrap Market Analytics',
+    subtitle: 'Marketplace Analytics & Business Intelligence',
     description:
-      'A computer-vision powered face authentication system with encrypted secure storage. Register users via webcam, authenticate with liveness detection, and manage access securely.',
-    technologies: ['Python', 'OpenCV', 'Face Recognition', 'Flask', 'SQLite', 'Cryptography'],
+      'A marketplace analytics solution designed for scrap dealers to monitor pricing trends, track inventory movement, and analyse supplier and customer activities through business intelligence dashboards.',
+    technologies: ['Python', 'SQL', 'Pandas', 'Tableau', 'Data Visualisation'],
     features: [
-      'Real-time face detection and recognition',
-      'Liveness detection to prevent spoofing',
-      'AES-encrypted secure file storage',
-      'User management dashboard',
+      'Marketplace analytics solution built for scrap dealers',
+      'Pricing trend analysis across different material categories',
+      'Inventory movement reports and sales forecasting',
+      'Dashboards for monitoring supplier and customer activities',
     ],
-    github: 'https://github.com/syed-abrar/facevault', // [PLACEHOLDER]
-    demo: '#',                                           // [PLACEHOLDER]
+    github: 'https://github.com/abrar084', // Update with direct repo link when available
+    demo: '#',
     color: '#0891b2',
     accent: '#67e8f9',
-    icon: '🔐',
-  },
-  {
-    id: 'student-guidance',
-    title: 'Student Guidance Platform',
-    subtitle: 'Learning Resource Hub for Students',
-    description:
-      'A centralized student guidance and learning resource platform that helps students discover resources, plan their learning paths, and connect with guidance materials across subjects.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB'],
-    features: [
-      'Curated learning path recommendations',
-      'Subject-wise resource library',
-      'Progress tracking dashboard',
-      'Interactive guidance tools',
-    ],
-    github: 'https://github.com/syed-abrar/student-guidance', // [PLACEHOLDER]
-    demo: '#',                                                   // [PLACEHOLDER]
-    color: '#059669',
-    accent: '#34d399',
-    icon: '🎓',
+    icon: '📊',
   },
 ];
 
 export const TIMELINE: TimelineItem[] = [
   {
     id: 'edu-1',
-    year: '2022',
+    year: '2024',
     type: 'education',
-    title: 'Started AI & Data Science Program',
-    description: 'Enrolled in a degree program focused on Artificial Intelligence and Data Science, building strong foundations in mathematics, statistics, and programming.',
+    title: 'B.Tech — Artificial Intelligence & Data Science',
+    description:
+      'Enrolled at ISL Engineering College, Hyderabad, pursuing a four-year B.Tech degree in Artificial Intelligence & Data Science. Building strong foundations in Python, SQL, machine learning, and data analytics.',
     icon: '🚀',
   },
   {
     id: 'proj-1',
-    year: '2023',
+    year: '2024',
     type: 'project',
-    title: 'Built FaceVault',
-    description: 'Developed a face authentication system using OpenCV and Python, combining computer vision with secure encrypted storage.',
-    icon: '🔐',
+    title: 'Student Career Guidance Analytics System',
+    description:
+      'Built a recommendation system to guide students based on academic performance and interests. Included EDA, Tableau dashboards, and ML-based recommendation generation.',
+    icon: '🎓',
   },
   {
     id: 'proj-2',
-    year: '2024',
+    year: '2025',
     type: 'project',
-    title: 'Launched DataMind AI',
-    description: 'Created an end-to-end CSV data analysis platform with ML capabilities and interactive Plotly visualizations.',
-    icon: '🧠',
-  },
-  {
-    id: 'proj-3',
-    year: '2024',
-    type: 'project',
-    title: 'Student Guidance Platform',
-    description: 'Built a full-stack web platform to help students navigate learning resources and plan their educational journey.',
-    icon: '🎓',
+    title: 'Retail Scrap Market Analytics',
+    description:
+      'Designed a marketplace analytics solution for scrap dealers — analysing pricing trends, inventory movement, sales forecasting, and building supplier/customer monitoring dashboards.',
+    icon: '📊',
   },
   {
     id: 'goal-1',
     year: '2025',
     type: 'goal',
-    title: 'Data Analyst / ML Engineer Internship',
-    description: 'Seeking a hands-on internship to apply data science and ML skills in a real-world production environment.',
-    icon: '🌟',
+    title: 'Data Analyst / AI Internship',
+    description:
+      'Actively seeking an internship in data analytics or AI to apply Python, SQL, Tableau, and machine learning skills in a real-world production environment.',
+    icon: '�',
   },
   {
     id: 'goal-2',
     year: '2026',
     type: 'goal',
-    title: 'Graduate & Launch Career',
-    description: 'Complete degree and transition into a full-time role as a Data Analyst or Machine Learning Engineer.',
+    title: 'Advanced ML & BI Projects',
+    description:
+      'Planning to deepen expertise in XGBoost, advanced feature engineering, and business intelligence tools — building more complex, production-grade analytics solutions.',
+    icon: '🧠',
+  },
+  {
+    id: 'edu-2',
+    year: '2028',
+    type: 'education',
+    title: 'Graduate — B.Tech AI & Data Science',
+    description:
+      'Complete degree at ISL Engineering College and launch a full-time career as a Data Analyst or Machine Learning Engineer.',
     icon: '🌌',
   },
 ];
