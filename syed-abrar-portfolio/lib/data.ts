@@ -158,6 +158,38 @@ export const PROJECTS: Project[] = [
     accent: '#67e8f9',
     icon: '📊',
   },
+    {
+    id: 'facevault',
+    title: 'FaceVault',
+    subtitle: 'Biometric Authentication & Secure Access System',
+
+    description:
+      'A biometric authentication system designed to provide secure user access through face recognition, encrypted data storage, and authentication management.',
+
+    technologies: [
+      'Python',
+      'OpenCV',
+      'FastAPI',
+      'NumPy',
+      'Cryptography',
+      'SQLite'
+    ],
+
+    features: [
+      'Face detection and recognition using OpenCV',
+      'Secure storage of biometric data',
+      'User registration and authentication',
+      'REST API backend using FastAPI',
+      'Authentication status and session management'
+    ],
+
+    github: 'https://github.com/abrar084',
+    demo: '#',
+
+    color: '#10b981',
+    accent: '#6ee7b7',
+    icon: '🔐',
+  },
 ];
 
 export const TIMELINE: TimelineItem[] = [
