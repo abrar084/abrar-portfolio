@@ -10,7 +10,7 @@ export const PERSONAL = {
   subtitle: 'Aspiring Data Analyst',
   tagline: 'AI & Data Science Student | Aspiring Data Analyst',
   phone: '+91-9177620461',
-  email: 'syejunaid0084@gmail.com',
+  email: 'syedjunaid0084@gmail.com',
   linkedin: 'https://www.linkedin.com/in/syed-abrar-557528353',
   github: 'https://github.com/abrar084',
   resume: '/resume.pdf', // Place your resume PDF in the /public folder
