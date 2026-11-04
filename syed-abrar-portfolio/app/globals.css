@@ -4,130 +4,200 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* ── Design Tokens ─────────────────────────────────────────── */
 :root {
   --font-inter: 'Inter', sans-serif;
   --font-orbitron: 'Orbitron', sans-serif;
   --font-jetbrains: 'JetBrains Mono', monospace;
+
+  /* Hyperframe-inspired palette */
+  --bg:        #080a0f;
+  --bg-2:      #0d1117;
+  --bg-panel:  #111620;
+  --border:    rgba(255,255,255,0.07);
+  --border-lg: rgba(255,255,255,0.12);
+  --text-1:    #f4f6ff;
+  --text-2:    rgba(244,246,255,0.55);
+  --text-3:    rgba(244,246,255,0.3);
+  --accent:    #a78bfa;
+  --accent-2:  #38bdf8;
+  --accent-glow: rgba(167,139,250,0.18);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
-  background-color: #020408;
-  color: #f0f4ff;
+  background-color: var(--bg);
+  color: var(--text-1);
   font-family: var(--font-inter);
   overflow-x: hidden;
-  cursor: default;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #020408;
-}
+/* ── Custom Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #6b21a8, #0891b2);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #7c3aed, #0ea5e9);
+  border-radius: 2px;
 }
 
-/* Glass panel utility */
+/* ── Hyperframe Section Header ──────────────────────────────── */
+/* Usage: <div class="hf-section-label">  (01) About HyperFrame */
+.hf-label {
+  font-family: var(--font-jetbrains);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.hf-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-jetbrains);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* ── Editorial Divider ──────────────────────────────────────── */
+.hf-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Glass Panel ────────────────────────────────────────────── */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.025);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
 }
 
-.glass-hover {
-  transition: all 0.3s ease;
-}
+.glass-hover { transition: all 0.3s ease; }
 .glass-hover:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(167,139,250,0.35);
+  box-shadow: 0 0 32px rgba(167,139,250,0.1);
 }
 
-/* Text glow */
-.text-glow {
-  text-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.4);
-}
-.text-glow-cyan {
-  text-shadow: 0 0 30px rgba(8, 145, 178, 0.8), 0 0 60px rgba(8, 145, 178, 0.4);
-}
-
-/* Gradient text */
+/* ── Gradient Text ──────────────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, #a78bfa, #38bdf8, #a78bfa);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 
-@keyframes shimmer {
-  to { background-position: 200% center; }
+@keyframes shimmer { to { background-position: 200% center; } }
+
+/* ── Marquee ────────────────────────────────────────────────── */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-/* Section spacing */
-.section-padding {
-  padding: 5rem 1.5rem;
-}
-@media (min-width: 768px) {
-  .section-padding {
-    padding: 8rem 3rem;
-  }
-}
-@media (min-width: 1280px) {
-  .section-padding {
-    padding: 10rem 6rem;
-  }
+/* ── Hyperframe Number Badge ────────────────────────────────── */
+/* { 001 } style */
+.hf-num {
+  font-family: var(--font-jetbrains);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
 }
 
-/* Canvas container */
-.canvas-container {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+/* ── Text Glow ──────────────────────────────────────────────── */
+.text-glow     { text-shadow: 0 0 28px rgba(167,139,250,0.7), 0 0 56px rgba(167,139,250,0.35); }
+.text-glow-cyan{ text-shadow: 0 0 28px rgba(56,189,248,0.7),  0 0 56px rgba(56,189,248,0.35); }
+
+/* ── Section Spacing ────────────────────────────────────────── */
+.section-padding { padding: 5rem 1.5rem; }
+@media (min-width: 768px)  { .section-padding { padding: 7rem 3rem; } }
+@media (min-width: 1280px) { .section-padding { padding: 9rem 6rem; } }
+
+/* ── Canvas Container ───────────────────────────────────────── */
+.canvas-container { position: absolute; inset: 0; z-index: 0; }
+
+/* ── Button Base ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-primary:hover { opacity: 0.88; box-shadow: 0 0 28px rgba(124,58,237,0.4); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-lg);
+  color: var(--text-2);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--text-1); background: var(--accent-glow); }
+
+/* ── Shooting star ──────────────────────────────────────────── */
+@keyframes shoot {
+  0%   { transform: translateX(0) translateY(0); opacity: 1; }
+  100% { transform: translateX(300px) translateY(300px); opacity: 0; }
 }
 
-/* Reduced motion */
+/* ── Twinkle ────────────────────────────────────────────────── */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 1; }
+}
+
+/* ── Orbit ──────────────────────────────────────────────────── */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
+}
+
+/* ── Float ──────────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Orbital ring animation */
-@keyframes orbit {
-  from { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
-}
-
-/* Loading bar */
-@keyframes loading-fill {
-  from { width: 0%; }
-  to   { width: 100%; }
-}
-
-/* Starfield twinkle */
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50%       { opacity: 1; }
 }
